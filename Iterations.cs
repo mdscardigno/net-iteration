@@ -60,8 +60,7 @@ namespace DotnetIteration
         // 
         public static IEnumerable<string> StringyIndexes(List<string> words)
         {
-            var indexedWords = words.Select((word, index) => $"{word} is at index {index}");
-            return indexedWords;
+            return words.Select((word, index) => $"{word} is at index {index}"); ;
             // throw new System.NotImplementedException();
         }
 
@@ -85,7 +84,10 @@ namespace DotnetIteration
         // 
         public static IEnumerable<int> OnlyTheEvenIndexedSurvive(List<int> numbers)
         {
-            throw new System.NotImplementedException();
+
+            // throw new System.NotImplementedException();
+            var evenIndexedNumbers = numbers.Where((number, index) => index % 2 == 0);
+            return evenIndexedNumbers;
         }
 
 
